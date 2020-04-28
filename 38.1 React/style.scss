@@ -1,0 +1,125 @@
+@import 'fontawesome/scss/fontawesome.scss';
+@import 'fontawesome/scss/solid.scss';
+@import 'fontawesome/scss/brands.scss';
+
+@font-face {
+    font-family: "OpenSans";
+    src: url('fonts/OpenSans-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url('fonts/OpenSans-SemiBold.ttf');
+    font-weight: 500;
+}
+
+body{
+    background-color: #121116;
+}
+
+
+.container {
+    width: 1170px;
+    margin: 0 auto 0 auto;
+    padding: 90px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin: 30px 0 30px 0;
+}
+
+
+.title {
+    font-size: 20px;
+    font-family: "OpenSans";
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 21px 0 21px 0;
+    animation: slide-sideways 2s ease;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.hline {
+    background-color: rgb(255, 255, 255);
+    width: 230px;
+    border: none;
+    border-top: 1px solid white;
+    margin: 0;
+    animation: slide-sideways 2s ease;
+}
+
+
+.social {
+    margin: 21px 0 21px 0;
+    display: flex;
+    justify-content: space-between;
+    animation: slide-down 2s ease;
+
+    &-icon {
+        color: white;
+        font-size: 17px;
+        margin: 0 15px 0 15px;
+        animation-name: pulse;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+
+        &:hover {
+            color: #19c8fa;
+        }
+
+        &:nth-child(2) {
+            animation-delay: 1s;
+        }
+        &:nth-child(3) {
+            animation-delay: 2s;
+        }
+        &:nth-child(4) {
+            animation-delay: 3s;
+        }
+        
+    }
+}
+
+
+a {
+    color: #19c8fa;
+    text-decoration: none;
+}
+
+footer {
+    color: white;
+    margin: 55px 0 38px 0;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+
+    12%{transform: scale(1.5);}
+
+    25%{transform: scale(1);}
+
+    100%{transform: scale(1);}
+
+}
+
+@keyframes slide-down {
+    0% {height: 0px;overflow: hidden;}
+    66% {height: 0px;overflow: hidden;}
+
+    100% {height: 20px; overflow: auto;}
+}
+
+@keyframes slide-sideways {
+    0% {width: 0px;}
+    66% {width: 0px;}
+
+    100% {width: 230px;}
+}
